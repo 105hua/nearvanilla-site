@@ -1,94 +1,72 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+
+import OldDistrictImage from "./assets/old_district.webp";
+import Image from "next/image";
+import React from "react";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <nav className={styles.navbar}>
+        <div className={styles.navbar_container}>
+          <div id="left-container" className={styles.left_container}>
+            <h2 className={styles.navbar_brand}>NearVanilla</h2>
+
+            <ul className={styles.navbar_links}>
+              <li className={styles.navbar_link}>
+                <a href="#">About</a>
+              </li>
+              <li className={styles.navbar_link}>
+                <a href="#">Info</a>
+              </li>
+              <li className={styles.navbar_link}>
+                <a href="#">Player Stats</a>
+              </li>
+            </ul>
+          </div>
+
+          <div id="right-container">
+            <a href="#" className={styles.apply_link}>
+              Apply Now
+            </a>
+          </div>
         </div>
-      </div>
+      </nav>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <Image className={styles.old_district_image} src={OldDistrictImage} alt="Old District" />
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <div className={styles.intro_sect}>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+        <div className={styles.large_card}>
+          <h3 className={styles.large_card_title}>What is NearVanilla?</h3>
+          <p className={styles.large_card_desc}>
+            NearVanilla is a close-knit Community Server where we&apos;ve created an environment where players come together to build, collect, explore and have fun.
+            We focus on cooperative builds, player competitions, vibrant shopping districts and other events. All play styles are welcome.
           </p>
-        </a>
+        </div>
+
+        <div className={styles.grid_positioning}>
+          <div className={styles.small_card_grid}>
+            <div className={styles.small_card}>
+              <h3 className={styles.small_card_title}>Placeholder</h3>
+              <p className={styles.small_card_desc}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nunc nec libero tincidunt.
+              </p>
+            </div>
+            <div className={styles.small_card}>
+              <h3 className={styles.small_card_title}>Placeholder</h3>
+              <p className={styles.small_card_desc}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nunc nec libero tincidunt.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.image_gallery_container}>
+          <div className={styles.image_gallery}>
+          </div>
+        </div>
+
       </div>
     </main>
   );
